@@ -1,5 +1,6 @@
 package com.pipe.controller;
 import java.io.IOException;
+
 //testing dasdasdsa
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -29,7 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.pipe.model.PipelineMoniter;
-import com.pipe.model.User;
+import com.pipe.model.UserTable;
 import com.pipe.repositary.PipelineRepositary;
 import com.pipe.repositary.UserRepositary;
 import com.pipe.service.ExportService;
@@ -58,12 +59,12 @@ public ModelAndView logins(
 		@RequestParam("password") String password, Model m)  {
 	
 	
-	List<User> userlist=(List<User>) userrepositery.findAll();
-	Iterator<User> i=userlist.iterator();
+	List<UserTable> userlist=(List<UserTable>) userrepositery.findAll();
+	Iterator<UserTable> i=userlist.iterator();
 	
 	
 	while(i.hasNext()) {
-		User users=i.next();
+		UserTable users=i.next();
 	if(users.getUsername().equalsIgnoreCase(username)&&users.getPassword().equalsIgnoreCase(password)&&users.getUserType().equalsIgnoreCase("user")) {
 		return new ModelAndView("loginsuccess");
 		

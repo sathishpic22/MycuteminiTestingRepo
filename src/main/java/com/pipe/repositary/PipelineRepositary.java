@@ -2,6 +2,7 @@ package com.pipe.repositary;
 
 
 import java.util.Date;
+
 import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
@@ -10,7 +11,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.pipe.model.PipelineMoniter;
-import com.pipe.model.User;
+
 @Repository
 public interface PipelineRepositary extends CrudRepository<PipelineMoniter,Long> {
 	

@@ -8,16 +8,16 @@ import org.springframework.stereotype.Component;
 
 @Entity
 @Component
-public class User {
+public class UserTable {
 	@Id
 	private String username;
 	private String password;
 	private String userType;
-	public User() {
+	public UserTable() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public User(String username, String password, String userType) {
+	public UserTable(String username, String password, String userType) {
 		super();
 		this.username = username;
 		this.password = password;
