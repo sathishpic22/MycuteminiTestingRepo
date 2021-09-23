@@ -58,13 +58,14 @@ public ModelAndView logins(
 		@RequestParam("username") String username,
 		@RequestParam("password") String password, Model m)  {
 	
-	
 	List<UserTable> userlist=(List<UserTable>) userrepositery.findAll();
+	
 	Iterator<UserTable> i=userlist.iterator();
 	
 	
 	while(i.hasNext()) {
 		UserTable users=i.next();
+		
 	if(users.getUsername().equalsIgnoreCase(username)&&users.getPassword().equalsIgnoreCase(password)&&users.getUserType().equalsIgnoreCase("user")) {
 		return new ModelAndView("loginsuccess");
 		
@@ -72,6 +73,7 @@ public ModelAndView logins(
 	else if(users.getUsername().equalsIgnoreCase(username)&&users.getPassword().equalsIgnoreCase(password)&&users.getUserType().equalsIgnoreCase("user")) {
 		
 	}
+	System.out.println(users.getUsername()+""+users.getUsername());
 	
 	}
 	

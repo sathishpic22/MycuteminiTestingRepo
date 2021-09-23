@@ -11,8 +11,6 @@ import javax.persistence.TemporalType;
 @Entity
 public class PipelineMoniter {
 	
-	
-	
 	@Id
 	private long pipelineId;
 	@Temporal(TemporalType.DATE)
